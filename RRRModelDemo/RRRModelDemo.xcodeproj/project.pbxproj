@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B35848EF1EFA6A2200BC797B /* WeatherResult.m in Sources */ = {isa = PBXBuildFile; fileRef = B35848EE1EFA6A2200BC797B /* WeatherResult.m */; };
+		B35848F21EFA6A3300BC797B /* WeatherItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B35848F11EFA6A3300BC797B /* WeatherItem.m */; };
 		B3CB0BA91E2E02B8008437DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CB0BA81E2E02B8008437DA /* main.m */; };
 		B3CB0BAC1E2E02B8008437DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CB0BAB1E2E02B8008437DA /* AppDelegate.m */; };
 		B3CB0BAF1E2E02B8008437DA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CB0BAE1E2E02B8008437DA /* ViewController.m */; };
@@ -55,6 +57,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B35848ED1EFA6A2200BC797B /* WeatherResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherResult.h; sourceTree = "<group>"; };
+		B35848EE1EFA6A2200BC797B /* WeatherResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherResult.m; sourceTree = "<group>"; };
+		B35848F01EFA6A3300BC797B /* WeatherItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherItem.h; sourceTree = "<group>"; };
+		B35848F11EFA6A3300BC797B /* WeatherItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherItem.m; sourceTree = "<group>"; };
 		B3CB0BA41E2E02B8008437DA /* RRRModelDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RRRModelDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3CB0BA81E2E02B8008437DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B3CB0BAA1E2E02B8008437DA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -142,6 +148,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B35848F31EFA6A9E00BC797B /* WeatherModel */ = {
+			isa = PBXGroup;
+			children = (
+				B35848ED1EFA6A2200BC797B /* WeatherResult.h */,
+				B35848EE1EFA6A2200BC797B /* WeatherResult.m */,
+				B35848F01EFA6A3300BC797B /* WeatherItem.h */,
+				B35848F11EFA6A3300BC797B /* WeatherItem.m */,
+			);
+			name = WeatherModel;
+			sourceTree = "<group>";
+		};
+		B35848F41EFA6AC800BC797B /* CategoryModel */ = {
+			isa = PBXGroup;
+			children = (
+				B3CB0C131E2E046A008437DA /* CategoryResult.h */,
+				B3CB0C141E2E046A008437DA /* CategoryResult.m */,
+				B3CB0C151E2E046A008437DA /* ContentModel.h */,
+				B3CB0C161E2E046A008437DA /* ContentModel.m */,
+				B3CB0C171E2E046A008437DA /* DataModel.h */,
+				B3CB0C181E2E046A008437DA /* DataModel.m */,
+				B3CB0C191E2E046A008437DA /* ItemModel.h */,
+				B3CB0C1A1E2E046A008437DA /* ItemModel.m */,
+			);
+			name = CategoryModel;
+			sourceTree = "<group>";
+		};
 		B3CB0B9B1E2E02B8008437DA = {
 			isa = PBXGroup;
 			children = (
@@ -165,9 +197,8 @@
 		B3CB0BA61E2E02B8008437DA /* RRRModelDemo */ = {
 			isa = PBXGroup;
 			children = (
-				B3CB0C121E2E046A008437DA /* ExampleModels */,
-				B3CB0BDE1E2E03BD008437DA /* AFN */,
 				B3CB0BDA1E2E0318008437DA /* RRRModel */,
+				B3CB0C121E2E046A008437DA /* Models */,
 				B3CB0BAA1E2E02B8008437DA /* AppDelegate.h */,
 				B3CB0BAB1E2E02B8008437DA /* AppDelegate.m */,
 				B3CB0BAD1E2E02B8008437DA /* ViewController.h */,
@@ -184,6 +215,7 @@
 		B3CB0BA71E2E02B8008437DA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B3CB0BDE1E2E03BD008437DA /* AFN */,
 				B3CB0BA81E2E02B8008437DA /* main.m */,
 			);
 			name = "Supporting Files";
@@ -273,18 +305,13 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
-		B3CB0C121E2E046A008437DA /* ExampleModels */ = {
+		B3CB0C121E2E046A008437DA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B3CB0C131E2E046A008437DA /* CategoryResult.h */,
-				B3CB0C141E2E046A008437DA /* CategoryResult.m */,
-				B3CB0C151E2E046A008437DA /* ContentModel.h */,
-				B3CB0C161E2E046A008437DA /* ContentModel.m */,
-				B3CB0C171E2E046A008437DA /* DataModel.h */,
-				B3CB0C181E2E046A008437DA /* DataModel.m */,
-				B3CB0C191E2E046A008437DA /* ItemModel.h */,
-				B3CB0C1A1E2E046A008437DA /* ItemModel.m */,
+				B35848F41EFA6AC800BC797B /* CategoryModel */,
+				B35848F31EFA6A9E00BC797B /* WeatherModel */,
 			);
+			name = Models;
 			path = ExampleModels;
 			sourceTree = "<group>";
 		};
@@ -425,10 +452,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3CB0C051E2E03BD008437DA /* AFSecurityPolicy.m in Sources */,
+				B35848EF1EFA6A2200BC797B /* WeatherResult.m in Sources */,
 				B3CB0C071E2E03BD008437DA /* AFURLResponseSerialization.m in Sources */,
 				B3CB0BDD1E2E0318008437DA /* RRRModel.m in Sources */,
 				B3CB0BAF1E2E02B8008437DA /* ViewController.m in Sources */,
 				B3CB0C1B1E2E046A008437DA /* CategoryResult.m in Sources */,
+				B35848F21EFA6A3300BC797B /* WeatherItem.m in Sources */,
 				B3CB0C1C1E2E046A008437DA /* ContentModel.m in Sources */,
 				B3CB0C031E2E03BD008437DA /* AFHTTPSessionManager.m in Sources */,
 				B3CB0C1E1E2E046A008437DA /* ItemModel.m in Sources */,
@@ -682,6 +711,7 @@
 				B3CB0BD31E2E02B9008437DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3CB0BD41E2E02B9008437DA /* Build configuration list for PBXNativeTarget "RRRModelDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -690,6 +720,7 @@
 				B3CB0BD61E2E02B9008437DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3CB0BD71E2E02B9008437DA /* Build configuration list for PBXNativeTarget "RRRModelDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -698,6 +729,7 @@
 				B3CB0BD91E2E02B9008437DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
