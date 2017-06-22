@@ -32,6 +32,32 @@ WeatherItem.h
 @end
 
 ```
+如果模型里面有数组，需要在.m文件里面，映射数组对应的模型
+DataModel.h
+```
+#import "RRRModel.h"
+
+@interface DataModel : RRRModel
+
+@property (strong, nonatomic) NSArray  *resultData;          // 数据
+
+@end
+
+```
+DataModel.m
+```
+
+#import "DataModel.h"
+
+@implementation DataModel
+
+// 映射属性对应的类
+-(NSDictionary *)classOfArrayProperty {
+    return @{@"resultData":@"ItemModel"};
+}
+
+@end
+```
 #### 2. 请求数据之后，使用 `-(void)creatWithDict:(NSDictionary *)dict;` 解析字典
 
 ```
@@ -54,3 +80,4 @@ WeatherItem.h
         NSLog(@"****%@****",error);
     }];
 ```
+
