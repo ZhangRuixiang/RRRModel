@@ -24,41 +24,72 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7f-56-fLY">
                                 <rect key="frame" x="16" y="60" width="343" height="40"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="sjF-u4-BiD"/>
                                 </constraints>
-                                <state key="normal" title="请求网络1"/>
+                                <state key="normal" title="分类信息网络请求">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="query:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P5U-oF-tZW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnB-6M-9d2">
                                 <rect key="frame" x="16" y="120" width="343" height="40"/>
-                                <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.58823529409999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="XMI-Zy-ScG"/>
                                 </constraints>
-                                <state key="normal" title="请求网络2"/>
+                                <state key="normal" title="天气信息网络请求">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="queryData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8an-Jx-8nK"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="response" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2fQ-wi-t33">
+                                <rect key="frame" x="16" y="180" width="343" height="160"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="ma3-eW-5Vh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="response" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IYw-5F-qh1">
+                                <rect key="frame" x="16" y="180" width="343" height="160"/>
+                                <color key="backgroundColor" red="0.92931067940000001" green="0.92946994299999997" blue="0.92930072549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="RqZ-rd-F7D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="f7f-56-fLY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="3M1-xc-F6V"/>
                             <constraint firstItem="f7f-56-fLY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FDa-3Z-9g5"/>
+                            <constraint firstItem="IYw-5F-qh1" firstAttribute="top" secondItem="cnB-6M-9d2" secondAttribute="bottom" constant="20" id="I3A-S0-wme"/>
+                            <constraint firstItem="IYw-5F-qh1" firstAttribute="leading" secondItem="cnB-6M-9d2" secondAttribute="leading" id="IVO-7s-6et"/>
                             <constraint firstAttribute="trailingMargin" secondItem="f7f-56-fLY" secondAttribute="trailing" id="Kld-Jj-5SN"/>
                             <constraint firstItem="cnB-6M-9d2" firstAttribute="leading" secondItem="f7f-56-fLY" secondAttribute="leading" id="ND0-Mh-KHD"/>
+                            <constraint firstItem="IYw-5F-qh1" firstAttribute="trailing" secondItem="cnB-6M-9d2" secondAttribute="trailing" id="aTL-fo-mTi"/>
+                            <constraint firstItem="2fQ-wi-t33" firstAttribute="top" secondItem="cnB-6M-9d2" secondAttribute="bottom" constant="20" id="dz2-UB-RU3"/>
+                            <constraint firstItem="2fQ-wi-t33" firstAttribute="leading" secondItem="cnB-6M-9d2" secondAttribute="leading" id="hy4-hI-9vk"/>
                             <constraint firstItem="cnB-6M-9d2" firstAttribute="top" secondItem="f7f-56-fLY" secondAttribute="bottom" constant="20" id="k2i-vg-y8u"/>
                             <constraint firstItem="cnB-6M-9d2" firstAttribute="trailing" secondItem="f7f-56-fLY" secondAttribute="trailing" id="l5J-tH-jUQ"/>
+                            <constraint firstItem="2fQ-wi-t33" firstAttribute="trailing" secondItem="cnB-6M-9d2" secondAttribute="trailing" id="qN4-1F-ESV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="text" destination="IYw-5F-qh1" id="5zp-Mg-qfd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="118.29085457271366"/>
+            <point key="canvasLocation" x="206" y="98"/>
         </scene>
     </scenes>
 </document>

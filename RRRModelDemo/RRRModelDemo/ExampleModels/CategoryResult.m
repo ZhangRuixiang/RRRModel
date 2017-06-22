@@ -10,4 +10,10 @@
 
 @implementation CategoryResult
 
+// 剔除不想解析的属性
+- (NSArray *)getOutArray
+{
+    return @[@"code"];
+}
+
 @end

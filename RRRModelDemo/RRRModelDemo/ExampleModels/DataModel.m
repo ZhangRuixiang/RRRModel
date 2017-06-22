@@ -10,6 +10,7 @@
 
 @implementation DataModel
 
+// 映射属性对应的类
 -(NSDictionary *)classOfArrayProperty {
     return @{@"resultData":@"ItemModel"};
 }

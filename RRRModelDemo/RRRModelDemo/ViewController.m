@@ -18,6 +18,8 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextView *text;
+
 @end
 
 @implementation ViewController
@@ -41,7 +43,10 @@
         [result creatWithDict:responseObject];
         ItemModel *item = result.content.data.resultData[0];
         
+        self.text.text = item.CategoryName;
+        
         NSLog(@"****CategoryName: %@****",item.CategoryName);
+        NSLog(@"****code: %@****",result.code);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"****%@****",error);
@@ -60,15 +65,15 @@
         
         WeatherResult *weather = [[WeatherResult alloc] init];
         [weather creatWithDict:responseObject];
-        
         WeatherItem *item = weather.weatherinfo;
+        
+        self.text.text = item.city;
+        
         NSLog(@"****city: %@****",item.city);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"****%@****",error);
     }];
-
-    
 }
 
 @end
