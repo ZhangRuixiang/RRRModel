@@ -1,5 +1,5 @@
 # RRRModel
-RRRModel
+RRRModel 是一款简单好用的字典转模型框架。
 # 使用方法
 #### 1. 创建模型继承自RRRModel
 
